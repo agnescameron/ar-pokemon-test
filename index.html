@@ -9,7 +9,7 @@
     <script src="aframe-ar.js"></script>
 </head>
 
-<body style="margin: 0; overflow: hidden;" onclick="printDist()">
+<body style="margin: 0; overflow: hidden;">
     <a-scene
         vr-mode-ui="enabled: false"
 		embedded arjs>
@@ -22,6 +22,8 @@
 </body>
   
 	<script>
+		setInterval(printDist, 1000);
+		
 		function printDist() {
 			const distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
 			console.log(distanceMsg); 
