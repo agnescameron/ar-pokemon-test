@@ -16,7 +16,7 @@ window.onload = () => {
                 longitude: e.detail.position.longitude + 0.001
             });
             
-            document.getElementById("scene").appendChild(entity);
+            document.querySelector("a-scene").appendChild(entity);
             console.log('added', prop.color)
             testEntitiesAdded = true;
         }
