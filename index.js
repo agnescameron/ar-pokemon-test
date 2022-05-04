@@ -1,3 +1,8 @@
+var printDist = () => {
+    const distanceMsg = document.querySelector("a-entity").getAttribute('distanceMsg');
+    console.log("distance is", distanceMsg); 
+}
+
 window.onload = () => {
     let testEntitiesAdded = false;
     const el = document.querySelector("[gps-new-camera]");
@@ -20,4 +25,8 @@ window.onload = () => {
             testEntitiesAdded = true;
         }
     });
+
+        setInterval(printDist, 1000);
 };
+
+
