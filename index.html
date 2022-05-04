@@ -19,15 +19,16 @@
 	    
         	<a-camera gps-new-camera></a-camera>
 	</a-scene>
-</body>
-  
 	<script>
-		setInterval(printDist, 1000);
 		
-		function printDist() {
+		var printDist = () => {
 			const distanceMsg = document.querySelector('[gps-entity-place]').getAttribute('distanceMsg');
-			console.log(distanceMsg); 
+			console.log("distance is", distanceMsg); 
 		}
+		
+		setInterval(printDist, 1000);
 	</script>
+	
+</body>
 	
 </html>
